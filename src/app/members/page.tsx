@@ -1,12 +1,13 @@
-"use client";
+import { PrismaClient } from "@prisma/client";
 
 async function getMembersList() {
-    const res = await fetch('/api/members');
-    return res.json()
+    const prisma = new PrismaClient();
+    const members = await prisma.member.findMany();
+    return members;
 }
 
 export default async function Members() {
-    const data = await getMembersList()
+    const members = await getMembersList()
 
     return (
         <div>
@@ -19,7 +20,7 @@ export default async function Members() {
                     </tr>
                 </thead>
                 <tbody>
-                    {data.members.map((value: any, key: any) => {
+                    {members.map((value: any, key: any) => {
                         return (
                             <tr key={key}>
                                 <td className="border border-slate-300 first">{value.name}</td>
