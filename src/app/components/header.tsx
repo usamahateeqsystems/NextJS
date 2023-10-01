@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Menu() {
+export default function Header() {
     return (
         <ul>
             <li>
@@ -16,6 +16,12 @@ export default function Menu() {
             <li>
                 <Link href="/issued" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                     Books Issued
+                </Link>
+
+            </li>
+            <li>
+                <Link href="/about" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    About
                 </Link>
 
             </li>

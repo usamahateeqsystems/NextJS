@@ -1,4 +1,4 @@
-import Menu from "../components/menu";
+import Menu from "../components/header";
 
 import { PrismaClient } from "@prisma/client";
 
@@ -39,7 +39,6 @@ export async function IssuedList() {
 export default function Members() {
     return (
         <div>
-            <Menu />
             <h1 className="text-3xl">Members</h1>
             <IssuedList />
         </div>
