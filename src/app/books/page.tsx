@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import Link from "next/link";
 
-export async function BooksList() {
+async function BooksList() {
     const prisma = new PrismaClient();
     const books = await prisma.book.findMany();
 

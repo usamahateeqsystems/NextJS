@@ -1,6 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 
-export async function BooksItem(Id: any) {
+async function BooksItem(Id: any) {
     const prisma = new PrismaClient();
     const book = await prisma.book.findFirst({
         where: {
@@ -31,7 +31,7 @@ export default async function Book({ params }: any) {
             <h1 className="text-3xl">Issued to</h1>
             {book.issued.map((value: any, key: any) => {
                 return (
-                    <p>--{value.member.name}</p>
+                    <p key={key}>--{value.member.name}</p>
                 );
             })}
         </div>
