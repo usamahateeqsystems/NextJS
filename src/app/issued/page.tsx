@@ -1,6 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 
-export async function IssuedList() {
+async function IssuedList() {
     const prisma = new PrismaClient();
     const issued = await prisma.issued.findMany({
         include: {
