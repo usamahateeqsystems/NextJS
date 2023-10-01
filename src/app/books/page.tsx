@@ -11,7 +11,6 @@ export async function BooksList() {
                 <tr>
                     <th className="border border-slate-300 first">Title</th>
                     <th className="border border-slate-300 second">Author</th>
-                    <th className="border border-slate-300 second">View</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,12 +19,6 @@ export async function BooksList() {
                         <tr key={key}>
                             <td className="border border-slate-300 first">{value.title}</td>
                             <td className="border border-slate-300 second">{value.author}</td>
-                            <td className="border border-slate-300 second">
-                                <Link href={`/books/${value.id}`}>
-                                View
-                                </Link>
-                                
-                            </td>
                         </tr>
                     );
                 })}
