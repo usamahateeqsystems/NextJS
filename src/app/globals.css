@@ -51,3 +51,18 @@ li a:hover {
 .second {
   width: 500px;
 }
+
+.booksLayout{
+  background-color: #625d9b;
+  color:#ffffff;
+}
+
+.issuedLayout{
+  background-color: #649b5d;
+  color:#ffffff;
+}
+
+.membersLayout{
+  background-color: #979b5d;
+  color:#ffffff;
+}
