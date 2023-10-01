@@ -31,3 +31,5 @@ Assignment Items:
     Members API also using prisma to load data from supabase 
 5 Build API Routes
     Members page calls the members API loading from prisma on supabase
+6 Deployment on vercel
+    https://next-js-training-22087-e155qa816-usamah-ateeqs-projects.vercel.app/
