@@ -1,5 +1,7 @@
+"use client";
+
 async function getMembersList() {
-    const res = await fetch('http://localhost:3000/api/members');
+    const res = await fetch('/api/members');
     return res.json()
 }
 
